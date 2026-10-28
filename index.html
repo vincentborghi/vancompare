@@ -86,9 +86,9 @@
             <!-- Highlights Grid -->
             <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
                 <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
-                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Référence 2008</p>
-                    <p class="text-lg font-bold text-slate-900 mt-0.5">2,25 m au sol</p>
-                    <p class="text-xs text-emerald-600 flex items-center gap-1 mt-1"><i class="fa-solid fa-check"></i> Euro 4 sans AdBlue</p>
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Votre Jumpy 2008</p>
+                    <p class="text-lg font-bold text-slate-900 mt-0.5">1.6 HDi (90 ch)</p>
+                    <p class="text-xs text-emerald-600 flex items-center gap-1 mt-1"><i class="fa-solid fa-check"></i> 2,25 m sol • Euro 4 sans AdBlue</p>
                 </div>
                 <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
                     <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Accès Parking &lt; 1,90 m</p>
@@ -143,7 +143,7 @@
                 <!-- Filter buttons -->
                 <div class="flex flex-wrap items-center gap-2">
                     <span class="text-xs font-semibold text-slate-500 mr-1">Filtre rapide :</span>
-                    <button onclick="filterTable('all')" class="table-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white">Tous les 7 modèles</button>
+                    <button onclick="filterTable('all')" class="table-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white">Tous les 8 modèles</button>
                     <button onclick="filterTable('parking')" class="table-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">Parking &lt; 1,90 m</button>
                     <button onclick="filterTable('noadblue')" class="table-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">Sans AdBlue</button>
                 </div>
@@ -154,6 +154,7 @@
                     <thead>
                         <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase font-semibold border-b border-slate-200">
                             <th class="py-3.5 px-4 sticky left-0 bg-slate-100/95 z-10">Modèle & Version</th>
+                            <th class="py-3.5 px-3 text-center">Motorisation</th>
                             <th class="py-3.5 px-3 text-center">Long. hors tout</th>
                             <th class="py-3.5 px-3 text-center">Long. plancher</th>
                             <th class="py-3.5 px-3 text-center">Long. mi-hauteur</th>
@@ -390,12 +391,12 @@
                             <i class="fa-solid fa-clock-rotate-left"></i>
                         </span>
                         <div>
-                            <h4 class="font-bold text-slate-900 text-base">Citroën Jumpy II (2008) 2.0 HDi</h4>
-                            <p class="text-xs text-slate-600 font-semibold">La sérénité d'antan</p>
+                            <h4 class="font-bold text-slate-900 text-base">Citroën Jumpy II (2008)</h4>
+                            <p class="text-xs text-sky-700 font-semibold">1.6 HDi 90 ch (Votre moteur) &amp; 2.0 HDi</p>
                         </div>
                     </div>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        Le <strong>2.0 HDi 120/136</strong> (DW10) Euro 4 est une forteresse mécanique : pas d'AdBlue, pas de pompes d'urée, FAP absent ou très simple, plancher très bas (50 cm). Seuls l'âge, le volant moteur bimasse et la rouille sur trains roulants demandent surveillance.
+                        Votre <strong>1.6 HDi 90 ch (DV6)</strong> Euro 4 est sobre et sans AdBlue. Gros avantage : <strong>volant moteur rigide monomasse</strong> (aucun risque de casse bimasse). Surveillez simplement l'étanchéité des joints d'injecteurs. La variante <strong>2.0 HDi (DW10 120/136 ch)</strong> offre plus de couple (300 Nm) mais consomme davantage (~8,5 L) avec un volant bimasse.
                     </p>
                     <div class="mt-4 bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5 text-xs">
                         <div class="flex justify-between text-slate-700">
@@ -405,7 +406,10 @@
                             <span>Crit'Air :</span> <strong class="text-amber-600">Crit'Air 3 (Pénalisant ZFE)</strong>
                         </div>
                         <div class="flex justify-between text-slate-700">
-                            <span>Consommation :</span> <strong class="text-slate-900">≈ 7,8 à 9,2 L/100 km</strong>
+                            <span>Consommation :</span> <strong class="text-slate-900">≈ 6,9 à 7,5 L (1.6) / 8,5 L (2.0)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Volant moteur :</span> <strong class="text-emerald-700">Rigide monomasse (1.6 HDi)</strong>
                         </div>
                     </div>
                 </div>
@@ -526,9 +530,11 @@
             {
                 id: 'jumpy_2008',
                 name: 'Citroën Jumpy II (2008)',
-                version: 'L1H1 (Taille standard)',
+                version: 'L1H1 (Votre van)',
                 category: 'compact',
-                motor: '2.0 HDi 120/136 ch (DW10)',
+                motor: '1.6 HDi 90 ch (DV6)',
+                powerHp: 90,
+                torqueNm: 180,
                 lengthTotal: 4.81,
                 lengthTotalMm: 4805,
                 lengthFloor: 2.25,
@@ -547,12 +553,45 @@
                 adBlue: 'Non (Euro 4)',
                 hasAdBlue: false,
                 critAir: 3,
-                parkingPass: false, // 1.94m dépasse 1.90m
+                parkingPass: false, // 1.94m exceeds 1.90m
+                distri: 'Courroie sèche standard',
+                adblueReliability: 'Parfaite (Zéro AdBlue)',
+                globalReliability: 4.4,
+                pros: ['Votre moteur actuel sobre (~7 L/100 km)', 'Volant moteur monomasse rigide (aucun risque bimasse)', 'Seuil de chargement très bas (52 cm)', 'Zéro AdBlue ni capteurs d\'urée'],
+                cons: ['Puissance modeste (90 ch / 180 Nm) sur autoroute chargé', 'Surveillance étanchéité joints d\'injecteurs', 'Crit\'Air 3 (interdit en ZFE)']
+            },
+            {
+                id: 'jumpy_2008_20',
+                name: 'Citroën Jumpy II (2008)',
+                version: 'L1H1 (Variante 2.0)',
+                category: 'compact',
+                motor: '2.0 HDi 120/136 ch (DW10)',
+                powerHp: 120,
+                torqueNm: 300,
+                lengthTotal: 4.81,
+                lengthTotalMm: 4805,
+                lengthFloor: 2.25,
+                lengthFloorMm: 2254,
+                lengthMid: 2.06,
+                lengthMidMm: 2059,
+                heightExt: 1.94,
+                heightExtMm: 1942,
+                heightInt: 1.45,
+                heightIntMm: 1449,
+                sillHeight: 0.52,
+                wheelbase: 3.00,
+                widthBetweenWheels: 1.25,
+                widthBetweenWheelsMm: 1245,
+                turningRadius: 12.20,
+                adBlue: 'Non (Euro 4)',
+                hasAdBlue: false,
+                critAir: 3,
+                parkingPass: false,
                 distri: 'Courroie sèche standard',
                 adblueReliability: 'Parfaite (Zéro AdBlue)',
                 globalReliability: 4.5,
-                pros: ['Moteur DW10 increvable', 'Seuil de chargement très bas (52 cm)', 'Pas d\'AdBlue ni de capteurs complexes'],
-                cons: ['Crit\'Air 3 (interdit dans certaines ZFE)', 'Longueur de plancher limitée (2,25 m)', 'Insonorisation datée sur autoroute']
+                pros: ['Moteur DW10 vigoureux et coupleux (300 Nm)', 'Très à l\'aise sur autoroute et forte charge', 'Seuil très bas (52 cm)', 'Zéro AdBlue ni capteurs d\'urée'],
+                cons: ['Volant moteur bimasse sujet à l\'usure', 'Consommation plus élevée (~8,5 L/100 km)', 'Crit\'Air 3 (interdit en ZFE)']
             },
             {
                 id: 'jumpy_m',
@@ -753,7 +792,7 @@
             list.forEach(v => {
                 const totalPct = ((v.lengthTotal / maxLen) * 100).toFixed(1);
                 const floorPct = ((v.lengthFloor / maxLen) * 100).toFixed(1);
-                const is2008 = v.id === 'jumpy_2008';
+                const is2008 = v.id === 'jumpy_2008' || v.id === 'jumpy_2008_20';
 
                 const card = document.createElement('div');
                 card.className = `p-4 rounded-xl border ${is2008 ? 'bg-amber-50/60 border-amber-300' : 'bg-slate-50 border-slate-200'}`;
@@ -761,7 +800,7 @@
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs mb-2 gap-1">
                         <div class="flex items-center gap-2">
                             <span class="font-bold text-slate-900 text-sm">${v.name} <span class="font-normal text-slate-500">(${v.version})</span></span>
-                            ${is2008 ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-800">Votre van actuel</span>' : ''}
+                            ${v.id === 'jumpy_2008' ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-800">Votre van (1.6 HDi 90 ch)</span>' : (v.id === 'jumpy_2008_20' ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-700">Variante 2008 (2.0 HDi)</span>' : '')}
                         </div>
                         <div class="text-slate-600 font-medium">
                             Extérieur : <strong>${v.lengthTotal.toFixed(2)} m</strong> | Plancher : <strong class="text-sky-700">${v.lengthFloor.toFixed(2)} m</strong> | Haut. : <strong class="${v.heightExt < 1.91 ? 'text-emerald-600 font-bold' : 'text-slate-700'}">${v.heightExt.toFixed(2)} m</strong>
@@ -811,10 +850,10 @@
 
             let list = vehicles;
             if (filter === 'parking') list = vehicles.filter(v => v.parkingPass);
-            if (filter === 'noadblue') list = vehicles.filter(v => !v.hasAdBlue || v.id === 'jumpy_2008' || v.id === 'trafic_l1h1');
+            if (filter === 'noadblue') list = vehicles.filter(v => !v.hasAdBlue || v.id.startsWith('jumpy_2008') || v.id === 'trafic_l1h1');
 
             list.forEach(v => {
-                const is2008 = v.id === 'jumpy_2008';
+                const is2008 = v.id === 'jumpy_2008' || v.id === 'jumpy_2008_20';
                 const tr = document.createElement('tr');
                 tr.className = `hover:bg-slate-50 transition border-b border-slate-100 ${is2008 ? 'bg-amber-50/50 font-medium' : ''}`;
                 
@@ -822,7 +861,10 @@
                     <td class="py-3 px-4 sticky left-0 bg-white/95 border-r border-slate-200">
                         <div class="font-bold text-slate-900">${v.name}</div>
                         <div class="text-xs text-slate-500">${v.version}</div>
-                        ${is2008 ? '<span class="inline-block mt-1 text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">Réf. Actuelle</span>' : ''}
+                        ${v.id === 'jumpy_2008' ? '<span class="inline-block mt-1 text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">Votre van (1.6 HDi)</span>' : (v.id === 'jumpy_2008_20' ? '<span class="inline-block mt-1 text-[10px] font-bold text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded">Variante (2.0 HDi)</span>' : '')}
+                    </td>
+                    <td class="py-3 px-3 text-center text-xs font-semibold ${v.id === 'jumpy_2008' ? 'text-amber-800 bg-amber-50/70' : 'text-slate-700'}">
+                        ${v.motor}
                     </td>
                     <td class="py-3 px-3 text-center font-semibold text-slate-800">${v.lengthTotal.toFixed(2)} m</td>
                     <td class="py-3 px-3 text-center font-bold text-sky-700">${v.lengthFloor.toFixed(2)} m</td>
@@ -1028,7 +1070,7 @@
                 if (simState.parking === 'yes') {
                     resultTitle = "Conflit d'exigences (Parking < 1,90 m ET Zéro AdBlue)";
                     resultBadge = "Arbitrage nécessaire";
-                    resultDesc = "Le seul utilitaire passant sous les 1,90 m en diesel récent est le Citroën Jumpy III, mais il possède obligatoirement l'AdBlue. Pour éviter l'AdBlue sous 1,90 m, vous devez soit garder votre <strong>Jumpy 2008</strong> (1,94 m passe parfois en se tassant), soit passer à un modèle essence (ex: Ford Transit Custom Hybride PHEV).";
+                    resultDesc = "Le seul utilitaire passant sous les 1,90 m en diesel récent est le Citroën Jumpy III, mais il possède obligatoirement l'AdBlue. Pour éviter l'AdBlue sous 1,90 m, vous devez soit garder votre <strong>Jumpy 2008 1.6 HDi</strong> (1,94 m passe parfois en se tassant), soit passer à un modèle essence (ex: Ford Transit Custom Hybride PHEV).";
                     pros = ["Zéro risque AdBlue", "Coût d'entretien contenu"];
                     cons = ["Hauteur limite ou vignette Crit'Air 3"];
                 } else {
