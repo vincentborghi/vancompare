@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparateur Utilitaires & Vans : Dimensions, Fiabilité & AdBlue</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            800: '#0c4a6e',
+                            900: '#082f49'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .custom-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .gauge-bar { transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20">
+                    <i class="fa-solid fa-van-shuttle text-lg"></i>
+                </span>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg text-slate-900 leading-tight">VanScan & Comparatif</h1>
+                    <p class="text-xs text-slate-500 hidden sm:block">Jumpy 2008 vs Jumpy 3 vs Trafic 3 vs Transit Custom vs VW Transporter</p>
+                </div>
+            </div>
+            
+            <nav class="flex items-center space-x-1 sm:space-x-3 text-xs sm:text-sm font-medium">
+                <a href="#tableau" class="px-3 py-2 rounded-lg text-slate-600 hover:text-sky-600 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-table mr-1 sm:mr-1.5"></i><span class="hidden md:inline">Tableau</span>
+                </a>
+                <a href="#adblue" class="px-3 py-2 rounded-lg text-slate-600 hover:text-sky-600 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-flask-vial mr-1 sm:mr-1.5 text-amber-500"></i><span class="hidden md:inline">AdBlue &</span> Moteur
+                </a>
+                <a href="#duel" class="px-3 py-2 rounded-lg text-slate-600 hover:text-sky-600 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-scale-balanced mr-1 sm:mr-1.5"></i>Face-à-face
+                </a>
+                <a href="#simulateur" class="px-3 py-2 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-semibold transition shadow-sm">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-1 sm:mr-1.5"></i>Conseil
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Context Banner -->
+    <section class="bg-gradient-to-b from-white to-slate-100 border-b border-slate-200 py-10 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 border border-sky-200 mb-3">
+                <i class="fa-solid fa-circle-info"></i> Guide d'achat & Changement de van
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Quel van choisir pour remplacer votre Jumpy 2008 ?
+            </h2>
+            <p class="mt-3 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Comparez précisément la perte ou le gain en centimètres (longueur de chargement, passages de portes, barres de parking à 1,90 m) et évitez les pièges majeurs : réservoirs d'AdBlue scellés, courroies immergées et biturbos fragiles.
+            </p>
+            
+            <!-- Highlights Grid -->
+            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Référence 2008</p>
+                    <p class="text-lg font-bold text-slate-900 mt-0.5">2,25 m au sol</p>
+                    <p class="text-xs text-emerald-600 flex items-center gap-1 mt-1"><i class="fa-solid fa-check"></i> Euro 4 sans AdBlue</p>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Accès Parking &lt; 1,90 m</p>
+                    <p class="text-lg font-bold text-sky-600 mt-0.5">Jumpy III seul</p>
+                    <p class="text-xs text-amber-600 flex items-center gap-1 mt-1"><i class="fa-solid fa-triangle-exclamation"></i> Trafic & Transit &gt; 1,96 m</p>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Moteur le plus robuste</p>
+                    <p class="text-lg font-bold text-indigo-600 mt-0.5">Trafic 2.0 dCi</p>
+                    <p class="text-xs text-emerald-600 flex items-center gap-1 mt-1"><i class="fa-solid fa-link"></i> Distribution par chaîne</p>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Option Sans AdBlue</p>
+                    <p class="text-lg font-bold text-emerald-700 mt-0.5">Trafic 3 (14-16)</p>
+                    <p class="text-xs text-slate-500 flex items-center gap-1 mt-1"><i class="fa-solid fa-id-card"></i> Euro 5 / Crit'Air 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: VISUALISATION DES GABARITS -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6">
+            <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-ruler-combined text-sky-600"></i> Visualiseur de gabarits & longueurs utiles
+                </h3>
+                <p class="text-sm text-slate-500 mt-1">Comparaison visuelle à l'échelle des dimensions hors tout et des longueurs intérieures au plancher.</p>
+            </div>
+            <div class="mt-4 sm:mt-0 flex gap-2">
+                <button onclick="setDimensionFilter('all')" id="btn-scale-all" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-sky-600 text-white shadow-sm">Tous</button>
+                <button onclick="setDimensionFilter('compact')" id="btn-scale-compact" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50">Courts / Standards</button>
+                <button onclick="setDimensionFilter('long')" id="btn-scale-long" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50">Versions Longues (L2 / XL)</button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5" id="visual-bars-container">
+            <!-- Bars populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- SECTION 2: TABLEAU DÉTAILLÉ FILTRABLE -->
+    <section id="tableau" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="p-6 border-b border-slate-200 bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-table-list text-sky-600"></i> Tableau comparatif dimensionnel & technique
+                    </h3>
+                    <p class="text-xs text-slate-500 mt-1">Cliquez sur une colonne pour classer ou filtrez selon vos critères prioritaires.</p>
+                </div>
+                <!-- Filter buttons -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold text-slate-500 mr-1">Filtre rapide :</span>
+                    <button onclick="filterTable('all')" class="table-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white">Tous les 7 modèles</button>
+                    <button onclick="filterTable('parking')" class="table-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">Parking &lt; 1,90 m</button>
+                    <button onclick="filterTable('noadblue')" class="table-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">Sans AdBlue</button>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto custom-scroll">
+                <table class="w-full text-left text-sm border-collapse min-w-[900px]">
+                    <thead>
+                        <tr class="bg-slate-100/80 text-slate-700 text-xs uppercase font-semibold border-b border-slate-200">
+                            <th class="py-3.5 px-4 sticky left-0 bg-slate-100/95 z-10">Modèle & Version</th>
+                            <th class="py-3.5 px-3 text-center">Long. hors tout</th>
+                            <th class="py-3.5 px-3 text-center">Long. plancher</th>
+                            <th class="py-3.5 px-3 text-center">Long. mi-hauteur</th>
+                            <th class="py-3.5 px-3 text-center">Haut. totale</th>
+                            <th class="py-3.5 px-3 text-center">Haut. utile</th>
+                            <th class="py-3.5 px-3 text-center">Seuil chargement</th>
+                            <th class="py-3.5 px-3 text-center">Larg. passages roues</th>
+                            <th class="py-3.5 px-3 text-center">Diam. braquage</th>
+                            <th class="py-3.5 px-3 text-center">AdBlue</th>
+                            <th class="py-3.5 px-3 text-center">Crit'Air</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200" id="table-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-3 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex flex-wrap justify-between items-center gap-2">
+                <div class="flex items-center gap-4">
+                    <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Conforme parkings &lt; 1,90 m</span>
+                    <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Parking &gt; 1,94 m (Risque barreaux)</span>
+                </div>
+                <span>*Valeurs constructeurs en ordre de marche à vide</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DUEL CÔTE À CÔTE -->
+    <section id="duel" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="bg-gradient-to-r from-sky-900 to-indigo-900 rounded-3xl text-white p-6 sm:p-8 shadow-xl">
+            <div class="max-w-3xl">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/30 text-sky-200 border border-sky-400/30 mb-2">
+                    Face-à-face interactif
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                    Comparez votre Jumpy 2008 avec votre futur van
+                </h3>
+                <p class="text-slate-300 text-sm mt-1">
+                    Sélectionnez deux utilitaires pour visualiser l'écart direct au centimètre près et le verdict mécanique.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                <!-- Selecteur 1 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sky-200 mb-2">Véhicule 1 (Par défaut votre actuel)</label>
+                    <select id="duel-select-1" onchange="renderDuel()" class="w-full bg-slate-800 text-white border border-slate-600 rounded-xl px-4 py-2.5 text-sm font-medium focus:ring-2 focus:ring-sky-400 focus:outline-none">
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+                <!-- Selecteur 2 -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-sky-200 mb-2">Véhicule 2 (Modèle envisagé)</label>
+                    <select id="duel-select-2" onchange="renderDuel()" class="w-full bg-slate-800 text-white border border-slate-600 rounded-xl px-4 py-2.5 text-sm font-medium focus:ring-2 focus:ring-sky-400 focus:outline-none">
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Résultat du Duel -->
+            <div class="mt-8 bg-white rounded-2xl text-slate-800 p-6 shadow-2xl border border-slate-100" id="duel-result">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: DOSSIER ADBLUE & FIABILITÉ MOTEUR -->
+    <section id="adblue" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200 mb-2">
+                <i class="fa-solid fa-triangle-exclamation"></i> Enquête & Retours d'expérience
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                La vérité sur l'AdBlue, les distributions et la fiabilité mécanique
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base mt-2">
+                Pourquoi certains acheteurs préfèrent garder un Euro 4 ou Euro 5, et comment chaque marque gère son système antipollution.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Carte Stellantis / Jumpy -->
+            <div class="bg-white rounded-2xl border-2 border-red-200 p-6 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-500 text-white text-[11px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Risque Élevé
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-flask"></i>
+                        </span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Citroën Jumpy III BlueHDi</h4>
+                            <p class="text-xs text-red-600 font-semibold">Le piège du réservoir scellé</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Sur les 2.0 et 1.5 BlueHDi, la pompe, l'élément chauffant et la jauge sont <strong>soudés dans le réservoir</strong>. En cas de bouchage du clapet de dégazage, le réservoir s'écrase sous vide.
+                    </p>
+                    <div class="mt-4 bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5 text-xs">
+                        <div class="flex justify-between text-slate-700">
+                            <span>Type de panne :</span> <strong class="text-red-700">Déformation / Jauge HS</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Réparabilité :</span> <strong class="text-red-700">Zéro (bloc entier)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Facture moyenne :</span> <strong class="text-slate-900">1 100 € à 1 500 €</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Distribution :</span> <strong class="text-slate-900">Courroie classique</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    <i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i> Conseil : Utiliser systématiquement un additif anti-cristallisant à chaque plein d'AdBlue.
+                </div>
+            </div>
+
+            <!-- Carte Renault Trafic -->
+            <div class="bg-white rounded-2xl border-2 border-emerald-300 p-6 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Recommandé
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-shield-check"></i>
+                        </span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Renault Trafic III (2.0 dCi)</h4>
+                            <p class="text-xs text-emerald-700 font-semibold">Architecture modulaire & Chaîne</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Le bloc <strong>M9R 2.0 Blue dCi</strong> post-2019 est un modèle de robustesse. L'AdBlue est modulaire : la pompe et les sondes se remplacent séparément. En prime, distribution par <strong>chaîne intégrale</strong> sans entretien lourd.
+                    </p>
+                    <div class="mt-4 bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5 text-xs">
+                        <div class="flex justify-between text-slate-700">
+                            <span>Type de panne :</span> <strong class="text-emerald-700">Rare (Sonde NOx / Faisceau)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Réparabilité :</span> <strong class="text-emerald-700">Excellente (pièces au détail)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Facture moyenne :</span> <strong class="text-slate-900">150 € à 450 €</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Distribution :</span> <strong class="text-emerald-700">Chaîne (très durable)</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    <i class="fa-solid fa-star text-emerald-500 mr-1"></i> Astuce : Le Trafic 1.6 dCi 2014-mi 2016 est <strong>Euro 5 sans AdBlue</strong> et Crit'Air 2 !
+                </div>
+            </div>
+
+            <!-- Carte Ford Transit Custom -->
+            <div class="bg-white rounded-2xl border-2 border-amber-300 p-6 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-amber-500 text-white text-[11px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Vigilance Moteur
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-oil-can"></i>
+                        </span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Ford Transit 2.0 EcoBlue</h4>
+                            <p class="text-xs text-amber-600 font-semibold">Le piège de la « courroie humide »</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        L'AdBlue est modulaire et gérable, mais le moteur utilise une <strong>courroie immergée dans l'huile</strong> (wet belt). Si l'huile n'est pas scrupuleusement la norme Ford ou si le délai est dépassé, la courroie s'effiloche et colmate la crépine d'huile.
+                    </p>
+                    <div class="mt-4 bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5 text-xs">
+                        <div class="flex justify-between text-slate-700">
+                            <span>Type de panne :</span> <strong class="text-amber-700">Crépine bouchée / Injecteurs</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Réparabilité :</span> <strong class="text-amber-700">Moyenne (intervention lourde)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Facture distri :</span> <strong class="text-slate-900">1 200 € à 1 600 €</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Distribution :</span> <strong class="text-red-600">Courroie immergée à haut risque</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    <i class="fa-solid fa-wrench text-amber-500 mr-1"></i> Vidange impérative tous les 15 000 km avec huile stricte Ford WSS-M2C950-A.
+                </div>
+            </div>
+
+            <!-- Carte VW Transporter T6 150 vs BiTDI -->
+            <div class="bg-white rounded-2xl border-2 border-indigo-200 p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-car-side"></i>
+                        </span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">VW Transporter T6 2.0 TDI</h4>
+                            <p class="text-xs text-indigo-600 font-semibold">TDI 150 ch (Top) vs BiTDI (Casse)</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Le <strong>TDI 150 ch</strong> est très fiable avec une distribution courroie classique et un système SCR réparable. <strong>Attention absolue aux BiTDI (180/204 ch)</strong> dont le refroidisseur EGR s'effrite et détruit les chemises moteur (conso 2L d'huile / 1000 km).
+                    </p>
+                    <div class="mt-4 bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5 text-xs">
+                        <div class="flex justify-between text-slate-700">
+                            <span>AdBlue :</span> <strong class="text-slate-900">Modulaire (Sondes NOx sensibles)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Facture panne :</span> <strong class="text-slate-900">350 € à 650 €</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Alternative T5 :</span> <strong class="text-emerald-700">T5 phase 2 2.0 TDI 140 ch sans AdBlue</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    <i class="fa-solid fa-check text-emerald-500 mr-1"></i> Surcote importante à l'occasion mais excellente valeur résiduelle.
+                </div>
+            </div>
+
+            <!-- Carte Jumpy 2008 (Votre Actuel) -->
+            <div class="bg-white rounded-2xl border-2 border-slate-300 p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Citroën Jumpy II (2008) 2.0 HDi</h4>
+                            <p class="text-xs text-slate-600 font-semibold">La sérénité d'antan</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Le <strong>2.0 HDi 120/136</strong> (DW10) Euro 4 est une forteresse mécanique : pas d'AdBlue, pas de pompes d'urée, FAP absent ou très simple, plancher très bas (50 cm). Seuls l'âge, le volant moteur bimasse et la rouille sur trains roulants demandent surveillance.
+                    </p>
+                    <div class="mt-4 bg-slate-50 rounded-xl p-3 border border-slate-100 space-y-1.5 text-xs">
+                        <div class="flex justify-between text-slate-700">
+                            <span>AdBlue :</span> <strong class="text-emerald-700">Aucun (Zéro contrainte)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Crit'Air :</span> <strong class="text-amber-600">Crit'Air 3 (Pénalisant ZFE)</strong>
+                        </div>
+                        <div class="flex justify-between text-slate-700">
+                            <span>Consommation :</span> <strong class="text-slate-900">≈ 7,8 à 9,2 L/100 km</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    <i class="fa-solid fa-info-circle mr-1"></i> Si vous n'êtes pas contraint par les ZFE, le conserver reste économique !
+                </div>
+            </div>
+
+            <!-- Guide Pratique Gestion AdBlue -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h4 class="font-bold text-amber-900 text-base flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-sparkles text-amber-600"></i> Les 3 règles d'or si vous prenez l'AdBlue
+                    </h4>
+                    <ul class="text-xs text-amber-900/90 space-y-2.5 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-amber-700">1.</span>
+                            <span><strong>Anti-cristallisant obligatoire :</strong> Ajouter 25 ml d'additif spécial (type Wynn's ou Bardahl) dans le bidon d'AdBlue avant de verser pour dissoudre les sels blancs.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-amber-700">2.</span>
+                            <span><strong>Ne remplissez jamais à ras bord :</strong> Le clapet a besoin d'air pour réguler la pression sous peine de mettre la jauge en sécurité.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="font-bold text-amber-700">3.</span>
+                            <span><strong>Rincez immédiatement à l'eau :</strong> L'AdBlue qui coule sur la carrosserie crée une corrosion blanche poudreuse très agressive.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4 pt-3 border-t border-amber-200/60 text-xs font-semibold text-amber-800">
+                    Arrêt définitif du moteur programmé à 0 km restant : ne jamais ignorer l'alerte !
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: SIMULATEUR DE COMPATIBILITÉ & AIDE AU CHOIX -->
+    <section id="simulateur" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+            <div class="bg-slate-900 text-white p-6 sm:p-8">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500 text-white inline-block mb-2">Simulateur personnalisé</span>
+                <h3 class="text-2xl font-bold">Quel van correspond exactement à votre cahier des charges ?</h3>
+                <p class="text-slate-400 text-sm mt-1">Cochez vos impératifs du quotidien pour obtenir le modèle parfait.</p>
+            </div>
+
+            <div class="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Questionnaire -->
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">1. Accès Parking Souterrain / Garages (&lt; 1,90 m)</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" onclick="setSimOption('parking', 'yes')" id="sim-park-yes" class="sim-opt-btn border-2 border-sky-600 bg-sky-50 text-sky-800 font-semibold p-3 rounded-xl text-xs text-left">
+                                <i class="fa-solid fa-circle-check text-sky-600 mr-1.5"></i> Obligatoire (&lt; 1,90 m)
+                            </button>
+                            <button type="button" onclick="setSimOption('parking', 'no')" id="sim-park-no" class="sim-opt-btn border-2 border-slate-200 bg-white text-slate-700 font-semibold p-3 rounded-xl text-xs text-left">
+                                <i class="fa-regular fa-circle mr-1.5"></i> Pas important (&gt; 1,95 m ok)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">2. Longueur utile minimum au plancher</label>
+                        <select id="sim-floor-len" onchange="calcRecommendation()" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm font-semibold text-slate-800">
+                            <option value="2.20">Peu importe (≥ 2,25 m comme mon 2008)</option>
+                            <option value="2.50">Standard : au moins 2,50 m (Taille M / L1)</option>
+                            <option value="2.80">Grande longueur : au moins 2,85 m (Taille XL / L2)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">3. Tolérance au système AdBlue</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" onclick="setSimOption('adblue', 'refuse')" id="sim-ad-refuse" class="sim-opt-btn border-2 border-slate-200 bg-white text-slate-700 font-semibold p-3 rounded-xl text-xs text-left">
+                                <i class="fa-solid fa-ban text-red-500 mr-1.5"></i> Je refuse l'AdBlue
+                            </button>
+                            <button type="button" onclick="setSimOption('adblue', 'accept')" id="sim-ad-accept" class="sim-opt-btn border-2 border-sky-600 bg-sky-50 text-sky-800 font-semibold p-3 rounded-xl text-xs text-left">
+                                <i class="fa-solid fa-check text-sky-600 mr-1.5"></i> Accepté si fiable
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">4. Vignette ZFE / Crit'Air souhaitée</label>
+                        <select id="sim-critair" onchange="calcRecommendation()" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-sm font-semibold text-slate-800">
+                            <option value="any">Peu importe (campagne / pas de restriction)</option>
+                            <option value="2" selected>Crit'Air 2 minimum (Diesel moderne)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Résultat Recommandation -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col justify-between" id="sim-result-box">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="font-bold text-white text-sm">Comparateur Technique Utilitaires</p>
+                <p class="mt-1">Données techniques consolidées pour Citroën Jumpy II & III, Renault Trafic III, Ford Transit Custom et VW Transporter T5/T6.</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <span><i class="fa-solid fa-ruler mr-1"></i> Dimensions certifiées</span>
+                <span><i class="fa-solid fa-wrench mr-1"></i> Retours atelier</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIQUE JAVASCRIPT ET BASE DE DONNÉES -->
+    <script>
+        // Base de données complète des utilitaires
+        const vehicles = [
+            {
+                id: 'jumpy_2008',
+                name: 'Citroën Jumpy II (2008)',
+                version: 'L1H1 (Taille standard)',
+                category: 'compact',
+                motor: '2.0 HDi 120/136 ch (DW10)',
+                lengthTotal: 4.81,
+                lengthTotalMm: 4805,
+                lengthFloor: 2.25,
+                lengthFloorMm: 2254,
+                lengthMid: 2.06,
+                lengthMidMm: 2059,
+                heightExt: 1.94,
+                heightExtMm: 1942,
+                heightInt: 1.45,
+                heightIntMm: 1449,
+                sillHeight: 0.52,
+                wheelbase: 3.00,
+                widthBetweenWheels: 1.25,
+                widthBetweenWheelsMm: 1245,
+                turningRadius: 12.20,
+                adBlue: 'Non (Euro 4)',
+                hasAdBlue: false,
+                critAir: 3,
+                parkingPass: false, // 1.94m dépasse 1.90m
+                distri: 'Courroie sèche standard',
+                adblueReliability: 'Parfaite (Zéro AdBlue)',
+                globalReliability: 4.5,
+                pros: ['Moteur DW10 increvable', 'Seuil de chargement très bas (52 cm)', 'Pas d\'AdBlue ni de capteurs complexes'],
+                cons: ['Crit\'Air 3 (interdit dans certaines ZFE)', 'Longueur de plancher limitée (2,25 m)', 'Insonorisation datée sur autoroute']
+            },
+            {
+                id: 'jumpy_m',
+                name: 'Citroën Jumpy III (2016+)',
+                version: 'Taille M (L2H1 - 4,96 m)',
+                category: 'compact',
+                motor: '2.0 BlueHDi 140/150 ch',
+                lengthTotal: 4.96,
+                lengthTotalMm: 4959,
+                lengthFloor: 2.51,
+                lengthFloorMm: 2512,
+                lengthMid: 2.18,
+                lengthMidMm: 2185,
+                heightExt: 1.89,
+                heightExtMm: 1895,
+                heightInt: 1.40,
+                heightIntMm: 1397,
+                sillHeight: 0.62,
+                wheelbase: 3.28,
+                widthBetweenWheels: 1.26,
+                widthBetweenWheelsMm: 1258,
+                turningRadius: 12.40,
+                adBlue: 'Oui (Obligatoire)',
+                hasAdBlue: true,
+                critAir: 2,
+                parkingPass: true, // < 1.90m
+                distri: 'Courroie sèche',
+                adblueReliability: 'Mauvaise (Réservoir scellé se déforme)',
+                globalReliability: 3.2,
+                pros: ['Passe sous les portiques 1,90 m et parkings souterrains', 'Confort de conduite de berline', '+26 cm au plancher vs Jumpy 2008'],
+                cons: ['Pannes récurrentes réservoir AdBlue (1 200 €)', 'Seuil haut (62 cm)', 'Hauteur utile réduite à 1,40 m (-5 cm)']
+            },
+            {
+                id: 'jumpy_xl',
+                name: 'Citroën Jumpy III (2016+)',
+                version: 'Taille XL (L3H1 - 5,31 m)',
+                category: 'long',
+                motor: '2.0 BlueHDi 140/150/180 ch',
+                lengthTotal: 5.31,
+                lengthTotalMm: 5309,
+                lengthFloor: 2.86,
+                lengthFloorMm: 2862,
+                lengthMid: 2.53,
+                lengthMidMm: 2535,
+                heightExt: 1.93,
+                heightExtMm: 1930,
+                heightInt: 1.40,
+                heightIntMm: 1397,
+                sillHeight: 0.63,
+                wheelbase: 3.28,
+                widthBetweenWheels: 1.26,
+                widthBetweenWheelsMm: 1258,
+                turningRadius: 12.40,
+                adBlue: 'Oui (Obligatoire)',
+                hasAdBlue: true,
+                critAir: 2,
+                parkingPass: true,
+                distri: 'Courroie sèche',
+                adblueReliability: 'Mauvaise (Réservoir scellé se déforme)',
+                globalReliability: 3.2,
+                pros: ['Excellente longueur de chargement (2,86 m)', 'Rayon de braquage identique au taille M (même empattement)', 'Sous les 1,90 m à pleine charge'],
+                cons: ['Fragilité AdBlue', 'Porte-à-faux arrière long (attention aux manœuvres)', 'Seuil de chargement haut']
+            },
+            {
+                id: 'trafic_l1h1',
+                name: 'Renault Trafic III (2014+)',
+                version: 'L1H1 (Standard - 5,08 m)',
+                category: 'compact',
+                motor: '1.6 dCi (Euro 5 sans AdBlue) ou 2.0 dCi (avec AdBlue)',
+                lengthTotal: 5.08,
+                lengthTotalMm: 5080,
+                lengthFloor: 2.54,
+                lengthFloorMm: 2537,
+                lengthMid: 2.25,
+                lengthMidMm: 2250,
+                heightExt: 1.97,
+                heightExtMm: 1971,
+                heightInt: 1.39,
+                heightIntMm: 1387,
+                sillHeight: 0.55,
+                wheelbase: 3.10,
+                widthBetweenWheels: 1.27,
+                widthBetweenWheelsMm: 1268,
+                turningRadius: 11.84,
+                adBlue: 'Non (si 14-16) / Oui (post-16)',
+                hasAdBlue: false, // Dispo en version sans
+                critAir: 2,
+                parkingPass: false, // 1.97m
+                distri: 'Chaîne sans entretien',
+                adblueReliability: 'Bonne (modulaire, pièces au détail)',
+                globalReliability: 4.6,
+                pros: ['Meilleur rayon de braquage de tous (11,84 m)', 'Distribution par chaîne sur 2.0 dCi', 'Passage d\'europalette par la porte latérale (1,03 m)'],
+                cons: ['Hauteur 1,97 m : Ne rentre pas dans les parkings souterrains 1,90 m', 'Volume légèrement moins haut que Jumpy 2008']
+            },
+            {
+                id: 'trafic_l2h1',
+                name: 'Renault Trafic III (2014+)',
+                version: 'L2H1 (Long - 5,48 m)',
+                category: 'long',
+                motor: '2.0 Blue dCi 130/150/170 ch',
+                lengthTotal: 5.48,
+                lengthTotalMm: 5480,
+                lengthFloor: 2.94,
+                lengthFloorMm: 2937,
+                lengthMid: 2.65,
+                lengthMidMm: 2650,
+                heightExt: 1.97,
+                heightExtMm: 1971,
+                heightInt: 1.39,
+                heightIntMm: 1387,
+                sillHeight: 0.55,
+                wheelbase: 3.50,
+                widthBetweenWheels: 1.27,
+                widthBetweenWheelsMm: 1268,
+                turningRadius: 13.17,
+                adBlue: 'Oui (Euro 6)',
+                hasAdBlue: true,
+                critAir: 2,
+                parkingPass: false,
+                distri: 'Chaîne sans entretien',
+                adblueReliability: 'Bonne & modulaire',
+                globalReliability: 4.4,
+                pros: ['Immense longueur utile (2,94 m au sol, 2,65 m à mi-hauteur)', 'Moteur 2.0 Blue dCi très endurant', 'Seuil bas à 55 cm'],
+                cons: ['Empattement long (3,50 m) : rayon de braquage lourd en ville (13,17 m)', 'Hauteur 1,97 m (barres de parking)']
+            },
+            {
+                id: 'transit_custom',
+                name: 'Ford Transit Custom (2012-2023)',
+                version: 'L1H1 (4,97 m)',
+                category: 'compact',
+                motor: '2.0 EcoBlue 105/130/170 ch',
+                lengthTotal: 4.97,
+                lengthTotalMm: 4972,
+                lengthFloor: 2.55,
+                lengthFloorMm: 2554,
+                lengthMid: 2.20,
+                lengthMidMm: 2200,
+                heightExt: 1.97,
+                heightExtMm: 1972,
+                heightInt: 1.41,
+                heightIntMm: 1406,
+                sillHeight: 0.58,
+                wheelbase: 2.93,
+                widthBetweenWheels: 1.39,
+                widthBetweenWheelsMm: 1390,
+                turningRadius: 12.20,
+                adBlue: 'Oui (Euro 6)',
+                hasAdBlue: true,
+                critAir: 2,
+                parkingPass: false,
+                distri: 'Courroie humide (Wet Belt - Risque)',
+                adblueReliability: 'Moyenne (Sondes NOx fragiles)',
+                globalReliability: 2.8,
+                pros: ['Très large entre passages de roues (1,39 m)', 'Habitacle moderne et ergonomique style Ford', 'Comportement routier précis'],
+                cons: ['Courroie dans l\'huile à risque de colmatage de crépine', 'Remplacement distribution très cher (1 400 €)', 'Hauteur 1,97 m']
+            },
+            {
+                id: 'vw_transporter_t6',
+                name: 'VW Transporter T6 / T6.1',
+                version: 'Court (L1H1 - 4,90 m)',
+                category: 'compact',
+                motor: '2.0 TDI 150 ch (EA288)',
+                lengthTotal: 4.90,
+                lengthTotalMm: 4904,
+                lengthFloor: 2.57,
+                lengthFloorMm: 2572,
+                lengthMid: 2.22,
+                lengthMidMm: 2220,
+                heightExt: 1.98,
+                heightExtMm: 1980,
+                heightInt: 1.41,
+                heightIntMm: 1410,
+                sillHeight: 0.57,
+                wheelbase: 3.00,
+                widthBetweenWheels: 1.24,
+                widthBetweenWheelsMm: 1244,
+                turningRadius: 11.90,
+                adBlue: 'Oui (ou T5 sans AdBlue)',
+                hasAdBlue: true,
+                critAir: 2,
+                parkingPass: false,
+                distri: 'Courroie sèche classique',
+                adblueReliability: 'Bonne (Modulaire, sondes sensibles)',
+                globalReliability: 4.2,
+                pros: ['Moteur TDI 150 robuste et vif', 'Valeur de revente exceptionnelle', 'Forme très cubique optimisée pour l\'aménagement'],
+                cons: ['Tarifs d\'occasion très élevés', 'Hauteur 1,98 m', 'Éviter formellement le BiTDI 180/204 ch (casse moteur)']
+            }
+        ];
+
+        // 1. RENDER VISUAL BARS
+        function renderVisualBars(filter = 'all') {
+            const container = document.getElementById('visual-bars-container');
+            container.innerHTML = '';
+
+            const list = filter === 'all' ? vehicles : vehicles.filter(v => v.category === filter);
+            const maxLen = 5.60; // scale reference in meters
+
+            list.forEach(v => {
+                const totalPct = ((v.lengthTotal / maxLen) * 100).toFixed(1);
+                const floorPct = ((v.lengthFloor / maxLen) * 100).toFixed(1);
+                const is2008 = v.id === 'jumpy_2008';
+
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-xl border ${is2008 ? 'bg-amber-50/60 border-amber-300' : 'bg-slate-50 border-slate-200'}`;
+                card.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs mb-2 gap-1">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-slate-900 text-sm">${v.name} <span class="font-normal text-slate-500">(${v.version})</span></span>
+                            ${is2008 ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-800">Votre van actuel</span>' : ''}
+                        </div>
+                        <div class="text-slate-600 font-medium">
+                            Extérieur : <strong>${v.lengthTotal.toFixed(2)} m</strong> | Plancher : <strong class="text-sky-700">${v.lengthFloor.toFixed(2)} m</strong> | Haut. : <strong class="${v.heightExt < 1.91 ? 'text-emerald-600 font-bold' : 'text-slate-700'}">${v.heightExt.toFixed(2)} m</strong>
+                        </div>
+                    </div>
+                    
+                    <!-- Outer Length Bar -->
+                    <div class="space-y-1.5">
+                        <div class="flex items-center text-[11px] text-slate-500 justify-between">
+                            <span>Carrosserie hors-tout</span>
+                            <span class="font-semibold text-slate-700">${v.lengthTotal.toFixed(2)} m</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                            <div class="gauge-bar h-full rounded-full ${is2008 ? 'bg-amber-500' : 'bg-slate-700'}" style="width: ${totalPct}%"></div>
+                        </div>
+
+                        <!-- Floor Length Bar -->
+                        <div class="flex items-center text-[11px] text-slate-500 justify-between pt-1">
+                            <span>Longueur utile au plancher</span>
+                            <span class="font-semibold text-sky-800">${v.lengthFloor.toFixed(2)} m</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                            <div class="gauge-bar h-full rounded-full ${is2008 ? 'bg-amber-400' : 'bg-sky-600'}" style="width: ${floorPct}%"></div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function setDimensionFilter(filter) {
+            ['all', 'compact', 'long'].forEach(f => {
+                const btn = document.getElementById(`btn-scale-${f}`);
+                if (f === filter) {
+                    btn.className = "px-3 py-1.5 text-xs font-medium rounded-lg bg-sky-600 text-white shadow-sm";
+                } else {
+                    btn.className = "px-3 py-1.5 text-xs font-medium rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-50";
+                }
+            });
+            renderVisualBars(filter);
+        }
+
+        // 2. RENDER MAIN COMPARISON TABLE
+        function renderTable(filter = 'all') {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+
+            let list = vehicles;
+            if (filter === 'parking') list = vehicles.filter(v => v.parkingPass);
+            if (filter === 'noadblue') list = vehicles.filter(v => !v.hasAdBlue || v.id === 'jumpy_2008' || v.id === 'trafic_l1h1');
+
+            list.forEach(v => {
+                const is2008 = v.id === 'jumpy_2008';
+                const tr = document.createElement('tr');
+                tr.className = `hover:bg-slate-50 transition border-b border-slate-100 ${is2008 ? 'bg-amber-50/50 font-medium' : ''}`;
+                
+                tr.innerHTML = `
+                    <td class="py-3 px-4 sticky left-0 bg-white/95 border-r border-slate-200">
+                        <div class="font-bold text-slate-900">${v.name}</div>
+                        <div class="text-xs text-slate-500">${v.version}</div>
+                        ${is2008 ? '<span class="inline-block mt-1 text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">Réf. Actuelle</span>' : ''}
+                    </td>
+                    <td class="py-3 px-3 text-center font-semibold text-slate-800">${v.lengthTotal.toFixed(2)} m</td>
+                    <td class="py-3 px-3 text-center font-bold text-sky-700">${v.lengthFloor.toFixed(2)} m</td>
+                    <td class="py-3 px-3 text-center text-slate-700">${v.lengthMid.toFixed(2)} m</td>
+                    <td class="py-3 px-3 text-center font-semibold ${v.heightExt <= 1.93 ? 'text-emerald-700 bg-emerald-50/50' : 'text-slate-800'}">
+                        ${v.heightExt.toFixed(2)} m
+                    </td>
+                    <td class="py-3 px-3 text-center text-slate-700">${v.heightInt.toFixed(2)} m</td>
+                    <td class="py-3 px-3 text-center font-medium ${v.sillHeight <= 0.55 ? 'text-emerald-600' : 'text-slate-600'}">
+                        ${(v.sillHeight * 100).toFixed(0)} cm
+                    </td>
+                    <td class="py-3 px-3 text-center text-slate-700">${v.widthBetweenWheels.toFixed(2)} m</td>
+                    <td class="py-3 px-3 text-center font-medium ${v.turningRadius <= 12.0 ? 'text-emerald-700' : 'text-slate-700'}">
+                        ${v.turningRadius.toFixed(2)} m
+                    </td>
+                    <td class="py-3 px-3 text-center">
+                        <span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold ${v.hasAdBlue ? 'bg-red-100 text-red-700' : 'bg-emerald-100 text-emerald-800'}">
+                            ${v.adBlue}
+                        </span>
+                    </td>
+                    <td class="py-3 px-3 text-center">
+                        <span class="w-6 h-6 rounded-full inline-flex items-center justify-center text-xs font-bold ${v.critAir === 2 ? 'bg-amber-400 text-amber-950' : 'bg-orange-500 text-white'}">
+                            ${v.critAir}
+                        </span>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterTable(type) {
+            document.querySelectorAll('.table-filter-btn').forEach(b => {
+                b.className = "table-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200";
+            });
+            event.target.className = "table-filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 text-white";
+            renderTable(type);
+        }
+
+        // 3. POPULATE SELECTS AND DUEL LOGIC
+        function initDuelSelects() {
+            const s1 = document.getElementById('duel-select-1');
+            const s2 = document.getElementById('duel-select-2');
+            s1.innerHTML = '';
+            s2.innerHTML = '';
+
+            vehicles.forEach(v => {
+                const opt1 = new Option(`${v.name} - ${v.version}`, v.id);
+                const opt2 = new Option(`${v.name} - ${v.version}`, v.id);
+                s1.add(opt1);
+                s2.add(opt2);
+            });
+
+            s1.value = 'jumpy_2008';
+            s2.value = 'jumpy_xl'; // Default interesting comparison
+            renderDuel();
+        }
+
+        function renderDuel() {
+            const id1 = document.getElementById('duel-select-1').value;
+            const id2 = document.getElementById('duel-select-2').value;
+            const v1 = vehicles.find(v => v.id === id1);
+            const v2 = vehicles.find(v => v.id === id2);
+
+            const lenFloorDiff = ((v2.lengthFloor - v1.lengthFloor) * 100).toFixed(0);
+            const lenExtDiff = ((v2.lengthTotal - v1.lengthTotal) * 100).toFixed(0);
+            const heightDiff = ((v2.heightExt - v1.heightExt) * 100).toFixed(0);
+            const heightIntDiff = ((v2.heightInt - v1.heightInt) * 100).toFixed(0);
+
+            const container = document.getElementById('duel-result');
+            container.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                    
+                    <!-- Vehicule 1 -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-xl font-bold text-slate-900">${v1.name}</h4>
+                            <span class="text-xs px-2.5 py-1 rounded-full font-semibold ${v1.hasAdBlue ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}">
+                                ${v1.adBlue}
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">${v1.version} • Moteur : ${v1.motor}</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Long. plancher</span>
+                                <strong class="text-base text-slate-900">${v1.lengthFloor.toFixed(2)} m</strong>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Long. mi-hauteur</span>
+                                <strong class="text-base text-slate-900">${v1.lengthMid.toFixed(2)} m</strong>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Hauteur totale</span>
+                                <strong class="text-base text-slate-900">${v1.heightExt.toFixed(2)} m</strong>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Rayon braquage</span>
+                                <strong class="text-base text-slate-900">${v1.turningRadius.toFixed(2)} m</strong>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold text-slate-700 uppercase mb-1">Forces :</p>
+                            <ul class="text-xs text-slate-600 space-y-1">
+                                ${v1.pros.map(p => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-500"></i> ${p}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Vehicule 2 & Ecarts -->
+                    <div class="space-y-4 md:pl-8 pt-6 md:pt-0">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-xl font-bold text-sky-800">${v2.name}</h4>
+                            <span class="text-xs px-2.5 py-1 rounded-full font-semibold ${v2.hasAdBlue ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}">
+                                ${v2.adBlue}
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-500 font-medium">${v2.version} • Moteur : ${v2.motor}</p>
+
+                        <!-- Ecarts en badge direct -->
+                        <div class="bg-sky-50 rounded-xl p-3 border border-sky-100 space-y-2 text-xs">
+                            <span class="font-bold text-sky-900 block">Différence par rapport au véhicule 1 :</span>
+                            <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
+                                <div class="${lenFloorDiff >= 0 ? 'text-emerald-700' : 'text-red-700'}">
+                                    Plancher : ${lenFloorDiff >= 0 ? '+' : ''}${lenFloorDiff} cm
+                                </div>
+                                <div class="${lenExtDiff >= 0 ? 'text-slate-700' : 'text-slate-600'}">
+                                    Carrosserie : ${lenExtDiff >= 0 ? '+' : ''}${lenExtDiff} cm
+                                </div>
+                                <div class="${heightDiff <= 0 ? 'text-emerald-700' : 'text-amber-700'}">
+                                    Hauteur toit : ${heightDiff >= 0 ? '+' : ''}${heightDiff} cm
+                                </div>
+                                <div class="${heightIntDiff >= 0 ? 'text-emerald-700' : 'text-red-700'}">
+                                    Hauteur intérieure : ${heightIntDiff >= 0 ? '+' : ''}${heightIntDiff} cm
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Long. plancher</span>
+                                <strong class="text-base text-slate-900">${v2.lengthFloor.toFixed(2)} m</strong>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Long. mi-hauteur</span>
+                                <strong class="text-base text-slate-900">${v2.lengthMid.toFixed(2)} m</strong>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Hauteur totale</span>
+                                <strong class="text-base text-slate-900">${v2.heightExt.toFixed(2)} m</strong>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                                <span class="text-slate-400 block">Rayon braquage</span>
+                                <strong class="text-base text-slate-900">${v2.turningRadius.toFixed(2)} m</strong>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold text-slate-700 uppercase mb-1">Points de vigilance :</p>
+                            <ul class="text-xs text-slate-600 space-y-1">
+                                ${v2.cons.map(c => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation text-amber-500"></i> ${c}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            `;
+        }
+
+        // 4. SIMULATEUR DE RECOMMANDATION
+        const simState = {
+            parking: 'yes',
+            adblue: 'accept',
+            floorLen: 2.20,
+            critAir: '2'
+        };
+
+        function setSimOption(type, value) {
+            simState[type] = value;
+            if (type === 'parking') {
+                document.getElementById('sim-park-yes').className = value === 'yes' ? "sim-opt-btn border-2 border-sky-600 bg-sky-50 text-sky-800 font-semibold p-3 rounded-xl text-xs text-left" : "sim-opt-btn border-2 border-slate-200 bg-white text-slate-700 font-semibold p-3 rounded-xl text-xs text-left";
+                document.getElementById('sim-park-no').className = value === 'no' ? "sim-opt-btn border-2 border-sky-600 bg-sky-50 text-sky-800 font-semibold p-3 rounded-xl text-xs text-left" : "sim-opt-btn border-2 border-slate-200 bg-white text-slate-700 font-semibold p-3 rounded-xl text-xs text-left";
+            }
+            if (type === 'adblue') {
+                document.getElementById('sim-ad-refuse').className = value === 'refuse' ? "sim-opt-btn border-2 border-sky-600 bg-sky-50 text-sky-800 font-semibold p-3 rounded-xl text-xs text-left" : "sim-opt-btn border-2 border-slate-200 bg-white text-slate-700 font-semibold p-3 rounded-xl text-xs text-left";
+                document.getElementById('sim-ad-accept').className = value === 'accept' ? "sim-opt-btn border-2 border-sky-600 bg-sky-50 text-sky-800 font-semibold p-3 rounded-xl text-xs text-left" : "sim-opt-btn border-2 border-slate-200 bg-white text-slate-700 font-semibold p-3 rounded-xl text-xs text-left";
+            }
+            calcRecommendation();
+        }
+
+        function calcRecommendation() {
+            simState.floorLen = parseFloat(document.getElementById('sim-floor-len').value);
+            simState.critAir = document.getElementById('sim-critair').value;
+
+            let resultTitle = "";
+            let resultBadge = "";
+            let resultDesc = "";
+            let pros = [];
+            let cons = [];
+
+            // Case 1: Refus catégorique AdBlue + crit'air 2
+            if (simState.adblue === 'refuse') {
+                if (simState.parking === 'yes') {
+                    resultTitle = "Conflit d'exigences (Parking < 1,90 m ET Zéro AdBlue)";
+                    resultBadge = "Arbitrage nécessaire";
+                    resultDesc = "Le seul utilitaire passant sous les 1,90 m en diesel récent est le Citroën Jumpy III, mais il possède obligatoirement l'AdBlue. Pour éviter l'AdBlue sous 1,90 m, vous devez soit garder votre <strong>Jumpy 2008</strong> (1,94 m passe parfois en se tassant), soit passer à un modèle essence (ex: Ford Transit Custom Hybride PHEV).";
+                    pros = ["Zéro risque AdBlue", "Coût d'entretien contenu"];
+                    cons = ["Hauteur limite ou vignette Crit'Air 3"];
+                } else {
+                    resultTitle = "Renault Trafic III (2014-mi 2016) 1.6 dCi Euro 5";
+                    resultBadge = "Le meilleur choix sans AdBlue";
+                    resultDesc = "C'est la perle rare : carrosserie et châssis modernes, classé <strong>Crit'Air 2</strong>, FAP classique mais <strong>aucun réservoir ni injecteur d'AdBlue</strong> d'origine.";
+                    pros = ["Zéro panne d'AdBlue", "Crit'Air 2", "Superbe rayon de braquage (11,84 m en L1)"];
+                    cons = ["Hauteur 1,97 m (pas de parking sous 1,90 m)", "Modèles d'occasion de 2014 à 2016 à inspecter avec soin"];
+                }
+            } 
+            // Case 2: Parking < 1.90m est obligatoire
+            else if (simState.parking === 'yes') {
+                if (simState.floorLen >= 2.80) {
+                    resultTitle = "Citroën Jumpy III Taille XL (2.0 BlueHDi 140/150)";
+                    resultBadge = "Grand volume sous 1,90 m";
+                    resultDesc = "Le Jumpy XL est le <strong>seul van du marché</strong> offrant 2,86 m utiles de plancher tout en conservant une silhouette abaissée à 1,90 m.";
+                    pros = ["Passe dans les souterrains et péages classe 1", "2,86 m de longueur utile", "Rayon de braquage inchangé (12,40 m)"];
+                    cons = ["Surveiller impérativement le réservoir d'AdBlue (additif indispensable)", "Seuil de chargement à 63 cm"];
+                } else {
+                    resultTitle = "Citroën Jumpy III Taille M (2.0 BlueHDi 140)";
+                    resultBadge = "Compromis idéal gabarit / parking";
+                    resultDesc = "Il mesure 4,96 m, offre 2,51 m au plancher (+26 cm par rapport à votre 2008) et accède à tous les parkings souterrains urbains.";
+                    pros = ["Passe sous les 1,90 m", "Conduite très confortable", "Très sobre (6,8 L/100)"];
+                    cons = ["Fiabilité AdBlue Stellantis à surveiller", "Hauteur intérieure utile 1,40 m (-5 cm vs 2008)"];
+                }
+            }
+            // Case 3: Parking libre + Fiabilité maximale
+            else {
+                if (simState.floorLen >= 2.80) {
+                    resultTitle = "Renault Trafic III L2H1 (2.0 Blue dCi 150)";
+                    resultBadge = "La référence chargement & longévité";
+                    resultDesc = "Distribution par chaîne inusable, AdBlue modulaire et fiable, et 2,94 m au plancher (69 cm de plus que votre Jumpy 2008).";
+                    pros = ["Moteur 2.0 Blue dCi très costaud", "Chaîne de distribution sans entretien", "Seuil bas (55 cm) et chargement palette latérale"];
+                    cons = ["Empattement 3,50 m encombrant en demi-tour urbain", "Hauteur 1,97 m"];
+                } else {
+                    resultTitle = "Renault Trafic III L1H1 (2.0 Blue dCi 130/150)";
+                    resultBadge = "Le van le plus polyvalent & fiable";
+                    resultDesc = "Le van le plus homogène : le meilleur diamètre de braquage de la catégorie (11,84 m), distribution par chaîne et AdBlue sans problème récurrent.";
+                    pros = ["Distribution par chaîne", "Maniabilité record", "Mécanique ultra éprouvée"];
+                    cons = ["Hauteur extérieure de 1,97 m"];
+                }
+            }
+
+            const box = document.getElementById('sim-result-box');
+            box.innerHTML = `
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-200 mb-2">
+                        ${resultBadge}
+                    </span>
+                    <h4 class="text-xl font-bold text-slate-900">${resultTitle}</h4>
+                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">${resultDesc}</p>
+                    
+                    <div class="mt-4 pt-3 border-t border-slate-200 space-y-2">
+                        <p class="text-xs font-bold text-slate-700 uppercase">Points forts :</p>
+                        <ul class="text-xs text-slate-600 space-y-1">
+                            ${pros.map(p => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> ${p}</li>`).join('')}
+                        </ul>
+                        <p class="text-xs font-bold text-slate-700 uppercase pt-2">Contrainte à intégrer :</p>
+                        <ul class="text-xs text-slate-600 space-y-1">
+                            ${cons.map(c => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation text-amber-500"></i> ${c}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-200">
+                    <a href="#tableau" class="block w-full text-center bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2.5 rounded-xl text-xs shadow-sm transition">
+                        Voir ses caractéristiques dans le tableau
+                    </a>
+                </div>
+            `;
+        }
+
+        // Initialize on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderVisualBars('all');
+            renderTable('all');
+            initDuelSelects();
+            calcRecommendation();
+        });
+    </script>
+</body>
+</html>
